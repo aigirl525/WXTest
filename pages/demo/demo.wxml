@@ -1,0 +1,49 @@
+<!--pages/demo/demo.wxml-->
+<text>pages/demo/demo.wxml</text>
+<form bindsubmit="formSubmit" bindreset="formResert">
+  <view class="section section-gap">
+    <view class="section_title">switch</view>
+    <switch name="switch" />
+  </view>
+  <view class="section section-gap">
+    <view class="section_title">slider</view>
+    <slider name="slider" show-value></slider>
+  </view>
+  <view class="section">
+    <view class="section_title">input</view>
+    <input name="input" placeholder="please input here"/>
+  </view>
+  <view class="section section-gap">
+    <view class="section_title">radio</view>
+    <radio-group name="radio-group">
+      <label>
+        <radio value='radio1'>radio1</radio>
+      </label>
+      <label>
+        <radio value='radio2'>radio2</radio>
+      </label>
+    </radio-group>
+  </view>
+  <view class="section section-gap">
+    <view class="section_title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label>
+        <checkbox value='checkbox1'>checkbox1</checkbox>
+      </label>
+      <label>
+        <checkbox value='checkbox2'>checkbox2</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+  <button form-type='submit'>Submit</button>
+  <button form-type='reset'>Reset</button>
+  </view>
+  <template is="msgItem" data="{{...item}}"/> 
+  <template name="msgItem"> 
+  <view> 
+    <text> {{index}}: {{msg}} </text> 
+    <text> Time: {{time}} </text> 
+  </view> 
+</template> 
+</form>
