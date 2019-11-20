@@ -17,6 +17,8 @@
   <view id="tapCommon" bindtap='bindViewCommon'>Common</view>  
   <view id="tapWxkey" bindtap='bindViewWxkey'>Wxkey</view> 
    <view id="test" bindtap='bindViewTest'>Test</view> 
+  <view id="scroll" bindtap='bindViewScroll'>Scroll</view> 
+  <view id="swiper" bindtap='bindViewSwiper'>Swiper</view> 
   <view>{{text}}</view>
   <button  bindtap="changeText">Change normal data </button>
 </view>

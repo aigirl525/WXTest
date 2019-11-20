@@ -11,7 +11,7 @@
   </view>
   <view class="section">
     <view class="section_title">input</view>
-    <input name="input" placeholder="please input here"/>
+    <input name="input" placeholder="please input here" />
   </view>
   <view class="section section-gap">
     <view class="section_title">radio</view>
@@ -36,14 +36,14 @@
     </checkbox-group>
   </view>
   <view class="btn-area">
-  <button form-type='submit'>Submit</button>
-  <button form-type='reset'>Reset</button>
+    <button form-type='submit'>Submit</button>
+    <button form-type='reset'>Reset</button>
   </view>
-  <template is="msgItem" data="{{...item}}"/> 
-  <template name="msgItem"> 
-  <view> 
-    <text> {{index}}: {{msg}} </text> 
-    <text> Time: {{time}} </text> 
-  </view> 
-</template> 
+  <template is="msgItem" data="{{...item}}" />
+  <template name="msgItem">
+    <view>
+      <text> {{index}}: {{msg}} </text>
+      <text> Time: {{time}} </text>
+    </view>
+  </template>
 </form>

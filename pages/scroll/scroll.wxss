@@ -1,0 +1,32 @@
+/* pages/scroll/scroll.wxss */
+.scroll-view-item-bc-green,.scroll-view-item-h-bc-green{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: red;
+}
+.scroll-view-item-bc-red{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: yellow;
+}
+.scroll-view-item-bc-yellow{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: blue;
+}
+
+.scroll-view-item-bc-blue{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: green;
+}
+.scroll-view-h{
+  display: flex; 
+  flex-direction: row;
+}
+.scroll-view{
+  height: 200rpx;
+  display: flex; 
+  flex-direction: row;
+}
+

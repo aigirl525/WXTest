@@ -38,6 +38,16 @@ Page({
       url: '../test/test',
     })
   },  
+  bindViewScroll: function () {
+    wx.navigateTo({
+      url: '../scroll/scroll',
+    })
+  },
+  bindViewSwiper: function () {
+    wx.navigateTo({
+      url: '../swiper/swiper',
+    })
+  },   
   changeText: function () {
     this.setData({
       text: 'changed data'

@@ -1,1 +1,29 @@
 /* pages/test/test.wxss */
+
+.flex-wrp {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item_bc_green {
+  width: 128rpx;
+  height: 128rpx;
+  background-color: green;
+}
+
+.flex-item_bc_red {
+  width: 128rpx;
+  height: 128rpx;
+  background-color: red;
+}
+
+.flex-item_bc_blue {
+  width: 128rpx;
+  height: 128rpx;
+  background-color: blue;
+}

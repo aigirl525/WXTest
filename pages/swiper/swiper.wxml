@@ -1,0 +1,56 @@
+<!--pages/swiper/swiper.wxml-->
+<text>pages/swiper/swiper.wxml</text>
+<swiper indicator-dots="{{indicatoeDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration='{{duration}}'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="100" height="100" />
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap='changeIndicatorDots'>indicator-dots</button>
+<button bindtap='changeAutoplay'>autoplay</button>
+<slider bindchange='intercalChange' show-value min='500' max='2000'></slider>
+<slider bindchange='durationChange' show-value min="1000" max='10000'></slider>
+
+<view>
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"></icon>
+  </block>
+</view>
+<view>
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="45"></icon>
+  </block>
+</view>
+<view>
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="45" color='{{item}}'></icon>
+  </block>
+</view>
+
+<view>
+  <view>
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+
+<progress percent='20' show-info='true'></progress>
+<progress percent='40' stroke-width="12" show-info='true'></progress>
+<progress percent='60' activeColor='pink' show-info='true'></progress>
+<progress percent='80' active='' show-info='true'></progress>
+
+<button type='default' size='{{defaultSize}}' loading='{{loading}}' plain='{{plain}}' disabled='{{disabled}}' bindtap='default' hover-class='other-button-hover'>
+  default
+</button>
+<button type='primary' size='{{primarySize}}' loading='{{loading}}' plain='{{plain}}' disabled='{{disabled}}' bindtap='primary'>
+  default
+</button>
+<button type='warm' size='{{warmSize}}' loading='{{loading}}' plain='{{plain}}' disabled='{{disabled}}' bindtap='warm'>
+  warm
+</button>
+<button bindtap='setDisabled'>点击设置以上按钮disabled属性</button>
+<button bindtap='setPlain'>点击设置以上按钮plain属性</button>
+<button bindtap='setLoading'>点击设置以上按钮loading属性
+</button>

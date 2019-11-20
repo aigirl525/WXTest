@@ -2,35 +2,56 @@
 <text>pages/test/test.wxml</text>
 <view>{{object.key}}{{array[0]}}</view>
 
-<template name = "staffName">
-<view>
-FirstName:{{firstName}},LastName:{{lastName}}
-</view>
-</template> 
-<template is = "staffName" data = "{{...staffA}}"></template>
-<template is = "staffName" data = "{{...staffB}}"></template>
-<template is = "staffName" data = "{{...staffC}}"></template>
-
-
-<template is = "objectComine" data = "{{for:e,bar:f}}">
+<template name="staffName">
+  <view>
+    FirstName:{{firstName}},LastName:{{lastName}}
+  </view>
 </template>
-<template is = "objectComine1" data = "{{...obj1,...obj2,e:5}}">
-</template>   
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+
+
+<template is="objectComine" data="{{for:e,bar:f}}">
+</template>
+<template is="objectComine1" data="{{...obj1,...obj2,e:5}}">
+</template>
 
 <template name="msgItem">
-<view>
-<text>{{index}}:{{msg}}</text>
-<text>Time:{{time}}</text>
-</view>
+  <view>
+    <text>{{index}}:{{msg}}</text>
+    <text>Time:{{time}}</text>
+  </view>
 </template>
-<template is = "msgItem" data = "{{...item}}"></template>
+<template is="msgItem" data="{{...item}}"></template>
 
 <template name="odd">
-<view>odd</view>
+  <view>odd</view>
 </template>
- <template name="even">
-<view>even</view>
+<template name="even">
+  <view>even</view>
 </template>
 <block wx:for="{{[1,2,3,4,5]}}">
-<template is="{{item % 2 == 0 ? 'even':'odd'}}"/>
+  <template is="{{item % 2 == 0 ? 'even':'odd'}}" />
 </block>
+
+<view id="tap test" data-hi="MINA" bindtap="tapName">Click me!</view>
+
+<view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindViewTap">DataSet Test</view>
+
+<view class="section">
+  <view class="section_title">flex-direction:row</view>
+  <view class="flex-wrp">
+    <view class="flex-item_bc_green">1</view>
+    <view class="flex-item_bc_red">2</view>
+    <view class="flex-item_bc_blue">3</view>
+  </view>
+</view>
+<view class="section">
+  <view class="section_title">flex-direction:column</view>
+  <view class="flex-col">
+    <view class="flex-item_bc_green">1</view>
+    <view class="flex-item_bc_red">2</view>
+    <view class="flex-item_bc_blue">3</view>
+  </view>
+</view>

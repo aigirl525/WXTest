@@ -1,50 +1,41 @@
-// pages/test/test.js
+// pages/scroll/scroll.js
+var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    object: {
-      key: 'Hello '
-    },
-    array: ['MINA'],
-    staffA: {
-      firstName: 'Hulk',
-      lastName: 'Hu'
-    },
-    staffB: {
-      firstName: 'Hulk1',
-      lastName: 'Hu1'
-    },
-    staffC: {
-      firstName: 'Hulk2',
-      lastName: 'Hu2'
-    },
-    e: 1,
-    f: 2,
-    obj1: {
-      a: 1,
-      b: 2
-    },
-    obj2: {
-      c: 3,
-      d: 4
-    },
-    item: {
-      index: 0,
-      msg: 'this is a template',
-      time: '20160915'
-    },
+    toView: 'red',
+    scrollTop: 100
   },
-  tapName: function(event) {
-    console.log(event)
+
+  upper: function(e) {
+    console.log(e)
   },
-  bindViewTap: function(event) {
-    console.log(event.target.dataset.alphaBeta)
-    console.log(event.target.dataset.alphabeta)
+  lower: function(e) {
+    console.log(e)
   },
-  /**
+  scroll: function(e) {
+    console.log(e)
+  },
+  tap: function(e) {
+    for (var i = 0; i < order.length; ++i){
+      if (order[i] === this.data.toView) {
+        console.log(this.data.toView),
+        this.setData({
+          toView: order[i + 1],
+        })
+        break
+      }
+    }
+  },
+  tapMove:function(e){
+    this.setData({
+      scrollTop:this.data.scrollTop + 10
+    })
+  } ,
+   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {

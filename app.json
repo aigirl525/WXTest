@@ -5,7 +5,9 @@
     "pages/demo/demo",
     "pages/common/common",
     "pages/wxkey/wxkey",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/scroll/scroll",
+    "pages/swiper/swiper"
   ],
   "window": {
     "backgroundTextStyle": "dark",

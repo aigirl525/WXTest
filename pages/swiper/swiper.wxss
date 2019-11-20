@@ -1,0 +1,9 @@
+/* pages/swiper/swiper.wxss */
+/*修改button默认的点击样式类*/ 
+.button-hover{
+  background-color: blue;
+}
+/*添加自定义button点击的样式类*/
+.other-button-hover{
+  background-color: blue;
+}
