@@ -19,6 +19,8 @@
    <view id="test" bindtap='bindViewTest'>Test</view> 
   <view id="scroll" bindtap='bindViewScroll'>Scroll</view> 
   <view id="swiper" bindtap='bindViewSwiper'>Swiper</view> 
+   <view id="component" bindtap='bindViewComponent'>Component</view> 
+   <view id="comp" bindtap='bindViewComp'>Comp</view> 
   <view>{{text}}</view>
   <button  bindtap="changeText">Change normal data </button>
 </view>

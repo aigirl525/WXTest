@@ -7,7 +7,10 @@
     "pages/wxkey/wxkey",
     "pages/test/test",
     "pages/scroll/scroll",
-    "pages/swiper/swiper"
+    "pages/swiper/swiper",
+    "pages/component/component",
+    "pages/label/label",
+    "pages/comp/comp"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -43,5 +46,6 @@
     "uploadFile": 30000,
     "downloadFile": 30000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

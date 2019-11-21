@@ -48,6 +48,16 @@ Page({
       url: '../swiper/swiper',
     })
   },   
+  bindViewComponent: function () {
+    wx.navigateTo({
+      url: '../component/component',
+    })
+  }, 
+  bindViewComp: function () {
+    wx.navigateTo({
+      url: '../comp/comp',
+    })
+  },   
   changeText: function () {
     this.setData({
       text: 'changed data'

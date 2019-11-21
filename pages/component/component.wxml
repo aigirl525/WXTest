@@ -1,0 +1,58 @@
+<!--pages/component/component.wxml-->
+<text>pages/component/component.wxml</text>
+<checkbox-group bindchange="checkboxChange">
+  <label wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+  </label>
+</checkbox-group>
+
+<view>
+  <input placeholder='这是一个可以自动聚焦的input' auto-focus></input>
+
+  <input placeholder='这是一个只有在按钮点击的时候才聚焦input' focus='{{focus}}'></input>
+  <button bindtap='bindButtonTap'>使得输入框获取焦点</button>
+
+  <input maxlength='10' placeholder='最大输入长度10'> </input>
+
+  <view>你输入的是：{{inputValue}}</view>
+  <input bindinput='bindKeyInput' placeholder='输入同步到view中'></input>
+
+  <input bindinput="bindReplaceInput" placeholder="连续的两个1会变成2"></input>
+  <input bindinput="bindHideKeyboard" placeholder="连续123自动收起键盘"></input>
+
+  <input password type='number' />
+  <input password type='text' />
+  <input type='digit' placeholder='带小数点的数字键盘' />
+  <input type='idcard' placeholder='身份证输入键盘' />
+  <input placeholder-style='color:red' placeholder='占位符字体是红色的' />
+</view>
+
+<view>
+  <view>表单组件在label内</view>
+  <checkbox-group bindchange="checkboxChange1">
+    <view class="label-1" wx:for="{{checkBoxItems}}">
+      <label>
+        <checkbox hidden="{{hidden}}" value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+        <view class='label-1_icon'>
+          <view class='label-1_icon-checked' style="opacity:{{item.checked ? 1: 0}}"></view>
+        </view>
+        <text class="label-1_text">{{item.value}}</text>
+      </label>
+    </view>
+  </checkbox-group>
+</view>
+<view>
+  <view>用label标识表单组件</view>
+  <radio-group bindchange="radioChange">
+    <view class="lable-2" wx:for="{{radioItems}}">
+      <radio id='{{item.name}}' hidden="{{hidden}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+      <view class="label-2_icon">
+        <view class="label-2_icon-checked" style="opacity:{{item.checked ? 1: 0}}">
+        </view>
+      </view>
+      <label class="label-2_text" for="{{item.name}}">
+        <text>{{item.name}}</text>
+      </label>
+    </view>
+  </radio-group>
+</view>

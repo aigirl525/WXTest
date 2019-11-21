@@ -5,10 +5,10 @@ var extraLine = [];
 var types = ['default', 'primary', 'warm']
 for (var i = 0; i < types.length; i++) {
   (function (type) {
-    Page[type] = function(e){
+    Page[type] = function (e) {
       var key = type + 'Size'
       var changeData = {}
-      changeData[key] = this.data[key] === 'default'?'mini':'default'
+      changeData[key] = this.data[key] === 'default' ? 'mini' : 'default'
       this.setData(changeData)
     }
   })(types[i])

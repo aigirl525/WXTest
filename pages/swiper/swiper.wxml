@@ -45,7 +45,7 @@
   default
 </button>
 <button type='primary' size='{{primarySize}}' loading='{{loading}}' plain='{{plain}}' disabled='{{disabled}}' bindtap='primary'>
-  default
+  primary
 </button>
 <button type='warm' size='{{warmSize}}' loading='{{loading}}' plain='{{plain}}' disabled='{{disabled}}' bindtap='warm'>
   warm
