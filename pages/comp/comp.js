@@ -1,4 +1,21 @@
 // pages/comp/comp.js
+const date = new Date()
+const years = []
+const months = []
+const days = []
+ 
+for (let i = 1990; i <= 2019; i++) {
+  years.push(i)
+}
+
+for (let i =1 ; i <= 12; i++) {
+  months.push(i)
+}
+
+for (let i = 1; i <= 31; i++) {
+  days.push(i)
+}
+
 Page({
 
   /**
@@ -16,7 +33,23 @@ Page({
     date: '2016-09-01',
     time: '12:01',
     region: ['广东省', '广州市', '海珠区'],
-    customItem: '全部'
+    customItem: '全部',
+
+    years,
+    year: date.getFullYear(),
+    months,
+    month: 2,
+    days,
+    day: 2, 
+
+  },
+  bindChange(e) {
+    const val = e.detail.value
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]]
+    })
   },
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -56,37 +89,38 @@ Page({
         break
         /*滑动第二列 */
       case 1:
-      /*第一列选择 */
+        /*第一列选择 */
         switch (data.multiIndex[0]) {
           case 0:
             /*第二列选择 */
             switch (data.multiIndex[1]) {
-              case 0: 
+              case 0:
                 data.multiArray[2] = ['猪肉绦虫', '吸血虫']
                 break
               case 1:
                 data.multiArray[2] = ['蛔虫']
-                 break
+                break
               case 2:
                 data.multiArray[2] = ['蚂蚁', '蚂蟥']
-                 break
-              case 3: 
+                break
+              case 3:
                 data.multiArray[2] = ['河蚌', '蜗牛', '蛞蝓']
                 break
-              case 4: 
+              case 4:
                 data.multiArray[2] = ['昆虫', '甲壳动物', '蛛形动物', '多足动物']
                 break
             }
             break
-          case 1:  /*第二列选择 */
+          case 1:
+            /*第二列选择 */
             switch (data.multiIndex[1]) {
-              case 0: 
+              case 0:
                 data.multiArray[2] = ['鲫鱼', '带鱼']
                 break
-              case 1: 
+              case 1:
                 data.multiArray[2] = ['青蛙', '娃娃鱼']
                 break
-              case 2: 
+              case 2:
                 data.multiArray[2] = ['蜥蜴', '龟', '壁虎']
                 break
             }

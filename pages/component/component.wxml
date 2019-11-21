@@ -56,3 +56,24 @@
     </view>
   </radio-group>
 </view>
+
+<view>
+  <view>
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+  </view>
+  <view>
+
+    <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;" />
+  </view>
+  <view>
+    <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+  </view>
+  <view>
+    <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+    <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+  </view>
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="form 中的 textarea" name="textarea" />
+    <button form-type="submit">提交</button>
+  </form>
+</view>

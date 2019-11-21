@@ -32,30 +32,30 @@ Page({
       },
     ],
     checkBoxItems: [{
-      name: 'usa',
-      value: '美国'
-    },
-    {
-      name: 'chn',
-      value: '中国',
-      checked: 'true'
-    },
-    {
-      name: 'bra',
-      value: '巴西'
-    },
-    {
-      name: 'jpn',
-      value: '日本'
-    },
-    {
-      name: 'eng',
-      value: '英国'
-    },
-    {
-      name: 'tur',
-      value: '法国'
-    },
+        name: 'usa',
+        value: '美国'
+      },
+      {
+        name: 'chn',
+        value: '中国',
+        checked: 'true'
+      },
+      {
+        name: 'bra',
+        value: '巴西'
+      },
+      {
+        name: 'jpn',
+        value: '日本'
+      },
+      {
+        name: 'eng',
+        value: '英国'
+      },
+      {
+        name: 'tur',
+        value: '法国'
+      },
     ],
     radioItems: [{
         name: 'usa',
@@ -85,8 +85,17 @@ Page({
     ],
     focus: false,
     inputValue: '',
-    hidden: false
+    hidden: false,
+    height: 20,
   },
+  bindTextAreaBlur(e) {
+    console.log(e.detail.value)
+  },
+  bindFormSubmit(e) {
+    console.log(e.detail.value.textarea)
+  },
+
+
   checkboxChange: function(e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
@@ -94,13 +103,13 @@ Page({
   checkboxChange1: function(e) {
     var checked = e.detail.value
     var changed = {}
-    for (var i = 0; i < this.data.checkBoxItems.length; i++) { 
+    for (var i = 0; i < this.data.checkBoxItems.length; i++) {
       if (checked.indexOf(this.data.checkBoxItems[i].name) !== -1) {
         changed['checkBoxItems[' + i + '].checked'] = true
       } else {
         changed['checkBoxItems[' + i + '].checked'] = false
       }
-    } 
+    }
     this.setData(changed)
   },
   radioChange: function(e) {
@@ -122,7 +131,7 @@ Page({
 
   bindButtonTap: function(e) {
     this.setData({
-      focus: Date.now(),
+      focus: true,
 
     })
   },

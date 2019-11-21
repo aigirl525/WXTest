@@ -2,10 +2,10 @@
 //获取应用实例
 
 var common = require("../../common.js")
-const app = getApp() 
+const app = getApp()
 Page({
   data: {
-    text:'init data',
+    text: 'init data',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -13,66 +13,76 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.switchTab({ 
+    wx.switchTab({
       url: '../logs/logs'
     })
   },
   //新添加的页面入口导航示例代码
-  bindViewDemo:function(){
+  bindViewDemo: function() {
     wx.navigateTo({
       url: '../demo/demo',
     })
   },
-  bindViewCommon: function () {
+  bindViewCommon: function() {
     wx.navigateTo({
       url: '../common/common',
     })
   },
-  bindViewWxkey: function () {
+  bindViewWxkey: function() {
     wx.navigateTo({
       url: '../wxkey/wxkey',
     })
-  },  
-  bindViewTest: function () {
+  },
+  bindViewTest: function() {
     wx.navigateTo({
       url: '../test/test',
     })
-  },  
-  bindViewScroll: function () {
+  },
+  bindViewScroll: function() {
     wx.navigateTo({
       url: '../scroll/scroll',
     })
   },
-  bindViewSwiper: function () {
+  bindViewSwiper: function() {
     wx.navigateTo({
       url: '../swiper/swiper',
     })
-  },   
-  bindViewComponent: function () {
+  },
+  bindViewComponent: function() {
     wx.navigateTo({
       url: '../component/component',
     })
-  }, 
-  bindViewComp: function () {
+  },
+  bindViewComp: function() {
     wx.navigateTo({
       url: '../comp/comp',
     })
-  },   
-  changeText: function () {
+  },
+  bindViewNavigator() {
+    wx.navigateTo({
+      url: '../navigator/navigator',
+    })
+  },
+  bindViewMedia() {
+    wx.navigateTo({
+      url: '../media/media',
+    })
+  },
+  changeText: function() {
     this.setData({
-      text: 'changed data'
-    }),
+        text: 'changed data'
+      }),
       common.sayHi1(),
       common.sayHello1("luo"),
       common.Hello1()
   },
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {

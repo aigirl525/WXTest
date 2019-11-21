@@ -10,7 +10,10 @@
     "pages/swiper/swiper",
     "pages/component/component",
     "pages/label/label",
-    "pages/comp/comp"
+    "pages/comp/comp",
+    "pages/navigator/navigator",
+    "pages/media/media",
+    "pages/navigator/redirect/redirect"
   ],
   "window": {
     "backgroundTextStyle": "dark",

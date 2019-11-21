@@ -21,6 +21,8 @@
   <view id="swiper" bindtap='bindViewSwiper'>Swiper</view> 
    <view id="component" bindtap='bindViewComponent'>Component</view> 
    <view id="comp" bindtap='bindViewComp'>Comp</view> 
+    <view id="navigator" bindtap='bindViewNavigator'>Navigator</view> 
+     <view id="media" bindtap='bindViewMedia'>Media</view> 
   <view>{{text}}</view>
   <button  bindtap="changeText">Change normal data </button>
 </view>
